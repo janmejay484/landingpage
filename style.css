@@ -1,0 +1,177 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%,
+ rgba(192,216,255,0.9248949579831933) 20%, 
+ rgba(21,89,103,1) 100%);
+}
+
+header {
+  background: #333333f2;
+  color: #fff;
+  padding: 1rem 2rem;
+  position: sticky;  /* Make the navbar sticky */
+  top: 0;            /* Stick to the top of the page */
+  z-index: 1000;     
+  /* Ensure it stays above other content */
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo img {
+  max-height: 50px; /* Adjust the height of the logo */
+  width: auto;      /* Maintain the aspect ratio of the logo */
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap; /* Ensure the menu wraps on smaller screens */
+}
+
+.nav-links li {
+  margin: 0 1rem;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.menu-btn {
+  display: none;
+  background: none;
+  color: #fff;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.hero {
+  /* background: url('https://via.placeholder.com/1500x600') no-repeat center center/cover; */
+  color: #fff;
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px
+}
+
+.hero-content {
+  max-width: 1000px;
+  padding: 8rem;
+  font-size: 2.5rem; /* Larger paragraph size */
+    /* margin-bottom: 20px; */
+}
+
+.hero .btn {
+  padding: 15px 30px;
+  font-size: 1.2rem; /* Larger button text */
+  color: white;
+  background: #007bff; /* Blue background */
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+section {
+  padding: 2%;
+  text-align: center;
+}
+
+.service {
+  margin: 1rem 0;
+}
+
+form input, form textarea {
+  width: 100%;
+  margin: 0.5rem 0;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+}
+
+form button {
+  padding: 0.75rem 1.5rem;
+  background: #00bcd4;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  nav .nav-links {
+    flex-direction: column;
+    display: none; /* Initially hidden for mobile */
+  }
+
+  nav .nav-links.show {
+    display: flex; /* Show menu when toggled */
+    width: 100%; /* Full-width menu */
+    text-align: center;
+  }
+
+  nav .menu-btn {
+    display: block;
+  }
+
+  .hero {
+    height: auto; /* Adjust height for smaller screens */
+    padding: 2rem;
+  }
+
+  .hero-content {
+    padding: 1rem;
+  }
+
+  section {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem; /* Reduce heading size on small screens */
+  }
+
+  .hero .btn {
+    font-size: 1rem; /* Adjust button size */
+    padding: 0.5rem 1rem;
+  }
+
+  form input, form textarea {
+    font-size: 0.9rem;
+  }
+
+  form button {
+    font-size: 1rem;
+  }
+}
+
+
+  
